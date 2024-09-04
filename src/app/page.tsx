@@ -1,113 +1,193 @@
-import Image from "next/image";
+import Header from '@/components/header'
+import { Button } from '@/components/ui/button'
+import { ChatIcon, CodeIcon, GuideIcon, SdkIcon } from '@/icons'
+import FeaturesSection from '@/sections/featrues'
+import TestimonialsSection from '@/sections/testimonials'
+import Image from 'next/image'
+import Link from 'next/link'
+import { FaChevronRight, FaHeart, FaRocket } from 'react-icons/fa'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <section className='my-5 md:my-16 space-y-10'>
+        <div className='max-w-screen-sm mx-auto w-full text-center'>
+          <h1 className='text-2xl md:text-5xl lg:text-6xl font-bold text-primary-light'>
+            The documentation you want, effortlessly
+          </h1>
+          <p className='text-base font-medium mt-5 text-primary-light'>
+            Meet the modern standards for public facing documentation. Beautiful out of the box,
+            easy to maintain, and optimized for user engagement.
+          </p>
         </div>
-      </div>
+        <div className='flex gap-5 justify-center w-full'>
+          <Button className='rounded-full' variant='secondary'>
+            Get Started
+          </Button>
+          <Button className='rounded-full' variant='outline'>
+            Documentation
+          </Button>
+        </div>
+      </section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className='container mx-auto'>
+        <div className='relative mx-auto mt-16 hidden w-fit space-x-4 rounded-full border border-secondary bg-secondary/10 py-1 px-1.5 sm:flex sm:space-x-1 gap-4'>
+          {[
+            {
+              label: 'Guides',
+              icon: <GuideIcon className='h-5 stroke-current' />,
+            },
+            {
+              label: 'API Reference',
+              icon: <CodeIcon className='h-5 stroke-current' />,
+            },
+            {
+              label: 'SDK Docs',
+              icon: <SdkIcon className='h-5 stroke-current' />,
+            },
+            {
+              label: 'Chat',
+              icon: <ChatIcon className='h-5 stroke-current' />,
+            },
+          ].map(({ icon, label }) => (
+            <button
+              key={label}
+              className='first:bg-secondary first:rounded-[2rem_1rem_1rem_2rem] flex items-center justify-center space-x-2.5 px-2.5 py-1.5 text-primary-light transition-all hover:text-primary-light/70'>
+              {icon}
+              <span>{label}</span>
+            </button>
+          ))}
+        </div>
+        <div className='mx-auto mt-5 max-w-6xl rounded-md p-2 bg-secondary-light/5 md:rounded-none'>
+          <Image
+            src='/hero/guides.png'
+            alt='mindsdb'
+            height={859}
+            width={1367}
+            className='rounded sm:rounded-lg'
+          />
+        </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+      <section className='py-16'>
+        <div className='max-w-7xl mx-auto flex justify-center text-primary-light gap-2'>
+          <h2 className='text-center text-primary-light'>
+            Powering developer experiences from fast growing startups to enterprises.
           </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <div className='flex justify-center'>
+            <Link href='#' className='flex items-center gap-3 group '>
+              <span className='font-medium'>Learn More</span>
+              <FaChevronRight className='relative group-hover:translate-x-2 transition-all' />
+            </Link>
+          </div>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        <div className='max-w-7xl mx-auto'>
+          <div className='mt-16 grid grid-cols-2 sm:grid-cols-7 gap-10'>
+            {[
+              { name: 'anthropic', src: '/logos/anthropic.svg' },
+              { name: 'cursor', src: '/logos/cursor.svg' },
+              { name: 'elevenlabs', src: '/logos/elevenlabs.svg' },
+              { name: 'fidelity', src: '/logos/fidelity.svg' },
+              { name: 'finch', src: '/logos/finch.svg' },
+              { name: 'freepik', src: '/logos/freepik.svg' },
+              { name: 'mindsdb', src: '/logos/mindsdb.svg' },
+              { name: 'openphone', src: '/logos/openphone.svg' },
+              { name: 'pinecone', src: '/logos/pinecone.svg' },
+              { name: 'resend', src: '/logos/resend.svg' },
+              { name: 'upstash', src: '/logos/upstash.svg' },
+              { name: 'washingtonpost', src: '/logos/washingtonpost.svg' },
+              { name: 'writer', src: '/logos/washingtonpost.svg' },
+              { name: 'zapier', src: '/logos/zapier.svg' },
+            ].map(({ name, src }) => (
+              <div key={name} className='flex items-center justify-center'>
+                <Image src={src} alt={name} height={50} width={70} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <section className='my-32 px-6 md:px-0 mx-auto max-w-5xl text-center'>
+        <div className='flex items-center justify-center gap-3'>
+          <GuideIcon className='fill-white' />
+          <h3>The modern standard</h3>
+        </div>
+
+        <div className='mt-6 text-center flex justify-center text-[1.7rem] leading-[1.3] text-gray-100 md:text-5xl md:leading-[1.15]'>
+          <h2 className='max-w-xl'>Beautiful documentation that converts users</h2>
+        </div>
+        <p className='text-center mt-4'>A platform you can rely on to reach your audience</p>
+      </section>
+
+      <section className='px-6 md:px-0 mx-4 my-32 rounded-3xl border border-white/[0.07] bg-secondary-light/[0.02]'>
+        <div className='relative overflow-hidden w-full before:absolute before:top-16 before:left-0 before:right-0 before:border-b before:border-white/[0.07]'>
+          <div className='relative overflow-hidden pt-16 md:pt-28 w-full max-w-6xl mx-auto '>
+            <div className='before:absolute before:top-0 before:bottom-0 before:left-16 before:border-l before:border-white/[0.07] after:absolute after:top-0 after:bottom-0 after:left-0 after:border-l after:border-white/[0.07]' />
+            <div className='before:absolute before:top-0 before:bottom-0 before:right-0 before:border-l before:border-white/[0.07] after:absolute after:top-0 after:bottom-0 after:right-16 after:border-l after:border-white/[0.07]' />
+
+            <div className='absolute left-1/2 top-0 z-0 mx-auto h-full w-full max-w-[58rem] -translate-x-1/2'>
+              <div className='absolute left-0 right-0 top-72 w-full'>
+                <Image
+                  alt='Chat'
+                  loading='lazy'
+                  width='1000'
+                  height='1000'
+                  decoding='async'
+                  data-nimg='1'
+                  className='block animate-spin [animation-duration:5s] select-none blur-3xl'
+                  src='/assets/features/color-wheel.svg'
+                />
+              </div>
+            </div>
+            <div
+              className='absolute -bottom-24 left-12 right-12 top-96 blur-3xl'
+              style={{
+                background:
+                  'conic-gradient(from 41deg at 50% 50%, rgba(4, 5, 10, 0.00) 0deg, #04050A 35.62500089406967deg, #04050A 238.12499284744263deg, rgba(4, 5, 10, 0.00) 283.0139493942261deg)',
+              }}
+            />
+
+            <div className='max-w-5xl mx-auto w-full relative z-20'>
+              <div className='px-6'>
+                <div className='flex items-center justify-center gap-3'>
+                  <FaRocket className='fill-white' />
+                  <h3>Features</h3>
+                </div>
+
+                <h2 className='mt-6 text-center flex justify-center text-[1.7rem] leading-[1.3] text-gray-100 md:text-5xl md:leading-[1.15]'>
+                  Documentation leveled up
+                </h2>
+                <p className='text-center mt-4'>Built for the modern business to engage users</p>
+              </div>
+              <div className='mx-auto mt-16 w-fit'>
+                <Image src='/assets/chat-dark.png' height={380} width={852} alt='chat' />
+              </div>
+              <div className='mt-6 text-center flex justify-center text-xl leading-[1.3] text-gray-100 md:text-4xl md:leading-[1.15]'>
+                <h2>AI Chat</h2>
+              </div>
+
+              <p className='mx-auto text-center w-80 mt-3 md:mt-5'>
+                GPT-4 powered chat box for users to get direct answers to their questions
+              </p>
+
+              <div className='mx-auto my-6 pb-16 w-fit'>
+                <Button className='rounded-full gap-3 px-6'>
+                  <span>Get Started</span>
+                  <FaChevronRight />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className='border-y border-white/[0.07] mb-16'>
+          <FeaturesSection />
+        </div>
+      </section>
+
+      <TestimonialsSection />
     </main>
-  );
+  )
 }

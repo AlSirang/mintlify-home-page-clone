@@ -1,0 +1,19 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M31 20C31 26.0751 26.0751 31 20 31V25H24.3916C24.7646 25 25.0603 24.6914 24.9895 24.3393C24.503 21.9216 22.6085 20.1111 20 20.1111V18.8889C21.4043 18.8889 22.5428 17.7945 22.5428 16.4444C22.5428 15.0944 21.4043 14 20 14V9C26.0751 9 31 13.9249 31 20Z" fill="url(#paint0_linear_407_7912)" fill-opacity="0.24"/>
+<circle cx="6" cy="33" r="2" stroke="#CCD7F6" stroke-opacity="0.12" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 2"/>
+<circle cx="7" cy="6" r="3" stroke="#CCD7F6" stroke-opacity="0.12" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 2"/>
+<circle cx="33.5" cy="8.5" r="1.5" stroke="#C0C7D8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="33.5" cy="32.5" r="2.5" stroke="#C0C7D8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 31C13.9249 31 9 26.0751 9 20C9 13.9249 13.9249 9 20 9" stroke="#CCD7F6" stroke-opacity="0.12" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 2"/>
+<path d="M20 4L20 36M20 31C26.0751 31 31 26.0751 31 20C31 13.9249 26.0751 9 20 9" stroke="#C0C7D8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.4572 16.4444C17.4572 17.7945 18.5957 18.8889 20 18.8889V14C18.5957 14 17.4572 15.0944 17.4572 16.4444Z" stroke="#CCD7F6" stroke-opacity="0.12" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 1.75"/>
+<path d="M20 20.1111C17.3915 20.1111 15.497 21.9216 15.0105 24.3393C14.9397 24.6914 15.2354 25 15.6084 25H20V20.1111Z" stroke="#CCD7F6" stroke-opacity="0.12" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 1.75"/>
+<path d="M20 18.8889C21.4043 18.8889 22.5428 17.7945 22.5428 16.4444C22.5428 15.0944 21.4043 14 20 14V18.8889Z" stroke="#C0C7D8" stroke-linejoin="round"/>
+<path d="M24.9895 24.3393C24.503 21.9216 22.6085 20.1111 20 20.1111V25H24.3916C24.7646 25 25.0603 24.6914 24.9895 24.3393Z" stroke="#C0C7D8" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_407_7912" x1="25.5" y1="4" x2="25.5" y2="36" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CCD7F6" stop-opacity="0"/>
+<stop offset="1" stop-color="#CCD7F6"/>
+</linearGradient>
+</defs>
+</svg>
