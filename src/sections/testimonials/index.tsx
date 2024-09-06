@@ -1,5 +1,5 @@
 import { splitArray } from '@/lib/utils'
-import TestimonialCard from './testimonialCard'
+import { TestimonialCard } from '@/components/cards'
 import { testimonials } from './testimonials'
 import { FaHeart } from 'react-icons/fa'
 import { Button } from '@/components/ui/button'
